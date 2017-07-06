@@ -1,0 +1,25 @@
+<div id="testimonial">
+	<section class="hero">
+		<div class="container">
+			<div class="caption animated fadeIn">
+				<h1 class="text-center"><strong>{{title}}</strong></h1>
+				<p class="text-center">{{caption}}</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="testi-list">
+		<div class="container">
+			<div ng-repeat="testiItem in testiItems">				
+				<figure class="cards animated fadeInDown">
+				  <blockquote><strong>{{testiItem.name}}</strong>: {{testiItem.message}}</blockquote>
+				  <div class="author">
+				    <img ng-src="{{testiItem.img}}" alt="{{testiItem.name}}">
+				    <h5>{{testiItem.name}} <span> {{testiItem.company}}</span></h5>
+				  </div>
+				</figure>
+			</div>
+		</div>
+	</section>
+	
+</div>

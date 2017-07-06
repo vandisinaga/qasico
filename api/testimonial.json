@@ -1,0 +1,38 @@
+[
+  { 
+    "id":"CW-1",
+    "name": "Andre",
+    "img":"images/testimonial/Andre.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas tenetur, dolorem, ullam facere rerum nemo."
+  },
+  { 
+    "id":"CW-2",
+    "name": "Bitsy",
+    "img":"images/testimonial/Bitsy.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas tenetur, dolorem, ullam facere rerum nemo."
+  },
+  { 
+    "id":"CW-3",
+    "name": "Miny",
+    "img":"images/testimonial/Miny.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita minima eos, aut magni asperiores eveniet."
+  },
+   { 
+    "id":"CW-4",
+    "name": "Twingky",
+    "img":"images/testimonial/Twingky.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eaque, reiciendis quos consequuntur ullam officiis."
+  },
+  { 
+    "id":"CW-5",
+    "name": "Lala",
+    "img":"images/testimonial/Lala.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit a itaque asperiores, dolore rerum facilis."
+  },
+  { 
+    "id":"CW-6",
+    "name": "Poo",
+    "img":"images/testimonial/Poo.jpg",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet officia velit fugiat excepturi nisi mollitia."
+  }
+]

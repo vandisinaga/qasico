@@ -1,0 +1,148 @@
+// ------------------COLOR------------------
+$dark: #000000;
+$black: #2b2b2b;
+$grey: #ececec;
+$crem: #F9C679;
+$white: #ffffff;
+$grey2: #eeeeee;
+$grey3: #909090;
+$orange: #ff8d39;
+$orange2: #e4861f;
+$orange3: #c76e0c;
+$red: #e43434;
+$black: rgba(0,0,0,.7);
+$facebook: #337ab7;
+$twitter: #2BA8E0;
+$darkblue: #3d4348;
+$darkblue2: #4b5e62;
+$darkblue3: #425667;
+$white2: #f5f5fa;
+$blue: #2059dd;
+$blue2: #1c59d2;
+$blue-hover: #2869ff;
+$blue-opct : rgba(32, 89, 221, 0.5);
+
+
+
+
+// ------------------MIXIN------------------------
+// FONT FACE
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+
+
+// Rotate
+@mixin rotate ($deg) { 
+	@include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+// Translate
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+// Skew
+@mixin skew ($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// Transform Origin
+@mixin transform-origin ($origin) {
+    	-webkit-transform-origin: $origin;
+    	-moz-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	transform-origin: $origin;
+}
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+@mixin box-shadow($top, $left, $blur, $Spread, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $Spread $color;
+    -moz-box-shadow:inset $top $left $blur $Spread $color;
+    box-shadow:inset $top $left $blur $Spread $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $Spread $color;
+    -moz-box-shadow: $top $left $blur $Spread $color;
+    box-shadow: $top $left $blur $Spread $color;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// media-screen
+$screen-xxs-max : 320px;
+$screen-xs-min : 480px;
+$screen-sm-min : 768px;
+$screen-md-min : 992px;
+$screen-lg-min : 1200px;
+
+$screen-xs-max : $screen-sm-min - 1px;
+$screen-sm-max : $screen-md-min - 1px;
+$screen-md-max : $screen-lg-min - 1px;

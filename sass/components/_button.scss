@@ -1,0 +1,24 @@
+.btn{
+    padding: 14px 20px;
+    margin-right: 20px;
+    background: $blue;
+    color: $white;
+	&.btn-circle{
+		@include border-radius(30px);
+	}
+	&.btn-circle:hover{
+		background: $blue-hover;
+		color: $white;
+		@include transition(all 0.3s ease);
+	}
+	&.btn-transparent{
+		background: white;
+		border: solid thin $blue;
+		color: $blue;
+	}
+	@media (max-width: $screen-xs-max){
+       display: block;
+       margin-top: 20px;
+    }
+}
+	

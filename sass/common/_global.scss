@@ -1,0 +1,32 @@
+@include font-face(Lato,/fonts/Lato-Regular,null,null,ttf woff woff2);
+@include font-face(LatoBold,/fonts/Lato-Bold,null,null,ttf woff woff2);
+@include font-face(Lato-Heavy,/fonts/Lato-Bold,null, null, ttf);
+@include font-face(LatoSemiBold,/fonts/Lato-Semibold,null,null,ttf woff woff2);
+
+.navbar-collapse.in {
+    overflow-y: hidden;
+  }
+*{
+	letter-spacing: 0.8px;
+	line-height: 1.8;
+}  
+p{
+	color:$black;
+	font-size: 14px;
+}
+body{
+	font-family:'Lato';
+}
+h1,h2,h3,h4,h5,h6,h6,h7,.h1,.h2,.h3,.h4,.h5,.h6,.h6,.h7{
+	font-family:'Lato-Heavy';
+	margin-bottom: 20px;
+}
+li{
+	list-style: none;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.capitalize{
+    text-transform: capitalize;
+}

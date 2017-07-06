@@ -1,0 +1,66 @@
+#home{
+    .hero{
+        background-image: url('../images/asset/bg_home.png');
+        background-size: cover;
+        background-position: 50% 0%;
+        .caption{
+            -webkit-animation-duration:1.5s;
+            @include transform(translate( 0, 30%));
+            h1,p{
+                color: $white;
+            }
+            @media (min-width: $screen-sm-min){
+               @include transform(translate( 0, 80%));
+            }
+            @media (min-width: $screen-md-min){
+               @include transform(translate( 0, 100%));
+            }
+            @media (min-width: $screen-lg-min){
+               @include transform(translate( 0, 120%));
+            }
+        }
+        .phone{
+            -webkit-animation-duration:2s;
+            background-image: url("../images/asset/bg-header-slider.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 275px;
+            @include transform(translate( 3%, 25%));
+            // media query for phone image and slider container
+            @media (min-width: $screen-sm-min){
+                height: 575px;
+                padding: 63px 60.5px 101px 39px;
+                @include transform(translate( 3%, 25%));
+                
+            }
+            @media (min-width: $screen-md-min){
+                padding: 63px 130.5px 101px 39px;
+                @include transform(translate( 10%, 27%));
+                margin-left: 40px;
+            }
+            @media (min-width: $screen-lg-min){
+                padding: 63px 230.5px 99px 39px;
+                @include transform(translate( 8%, 27%));
+            }
+            .carousel-control{
+                display:none;
+            }
+            .carousel-indicators{
+                display: none;
+            }
+            .carousel-inner>.item>a>img, 
+            .carousel-inner .item img{
+                height: 225px;
+                 @media (min-width: $screen-sm-min){
+                     height: 411px;
+                 }
+            }
+            .carousel, .carousel .item, 
+            .carousel-inner, .carousel-inner>.item>a>img,
+            .carousel-inner>.item>img {
+                  height: 100% !important;
+                  object-fit: cover;
+            }
+        }
+    }
+}

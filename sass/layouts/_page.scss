@@ -1,0 +1,14 @@
+.hero{
+    height: 570px;
+    position: relative;
+    @media (max-width: $screen-xs-max){
+		height: 659px;
+    }
+}
+.other{
+	padding: 30px 0;
+}
+
+.carousel-control.left,.carousel-control.right,.carousel-control:focus, .carousel-control:hover{
+	background:none !important;
+}

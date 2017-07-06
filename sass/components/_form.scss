@@ -1,0 +1,11 @@
+.form-control{
+    margin: 32px 0;
+    height: 49px;
+    border: solid thin $grey;
+}
+input{
+	outline:none;
+	&:hover,&:focus{
+		outline:none;
+	}
+}
