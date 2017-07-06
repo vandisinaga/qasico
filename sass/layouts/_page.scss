@@ -7,6 +7,19 @@
 }
 .other{
 	padding: 30px 0;
+	.btn{
+		font-weight: 700;
+		&.btn-transparent{
+			span{
+				color:$blue;
+			    font-size: 17px;
+	    		margin-right: 11px;
+			}
+			&:hover span,&:focus span{
+				color: $white;
+			}
+		}
+	}
 }
 
 .carousel-control.left,.carousel-control.right,.carousel-control:focus, .carousel-control:hover{
